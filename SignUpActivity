@@ -1,0 +1,118 @@
+package com.example.buildinventory
+
+import android.os.Bundle
+import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+
+class SignUpActivity : AppCompatActivity() {
+
+    lateinit var id: EditText
+    lateinit var username: EditText
+    lateinit var password: EditText
+    lateinit var confirmPassword: EditText
+    lateinit var signupBtn: Button
+
+    // Temporary user list
+    val userList = mutableListOf<String>()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+
+        super.onCreate(savedInstanceState)
+
+        setContentView(R.layout.activity_signup)
+
+        id = findViewById(R.id.createId)
+
+        username = findViewById(R.id.createUsername)
+
+        password = findViewById(R.id.createPassword)
+
+        confirmPassword = findViewById(R.id.confirmPassword)
+
+        signupBtn = findViewById(R.id.signupBtn)
+
+
+        signupBtn.setOnClickListener {
+
+            validateUser()
+
+        }
+
+    }
+
+
+    private fun validateUser() {
+
+        val userId = id.text.toString()
+
+        val userName = username.text.toString()
+
+        val pass = password.text.toString()
+
+        val confirmPass = confirmPassword.text.toString()
+
+
+        // Empty check
+
+        if (userId.isEmpty() || userName.isEmpty() || pass.isEmpty()) {
+
+            Toast.makeText(this, "All fields required", Toast.LENGTH_SHORT).show()
+
+            return
+
+        }
+
+
+        // Unique ID check
+
+        if (userList.contains(userId)) {
+
+            id.error = "ID already exists"
+
+            return
+
+        }
+
+
+        // Password uppercase rule
+
+        if (!pass[0].isUpperCase()) {
+
+            password.error = "First letter must be Uppercase"
+
+            return
+
+        }
+
+
+        // Password length rule
+
+        if (pass.length < 6) {
+
+            password.error = "Password minimum 6 characters"
+
+            return
+
+        }
+
+
+        // Password match
+
+        if (pass != confirmPass) {
+
+            confirmPassword.error = "Password not match"
+
+            return
+
+        }
+
+
+        // Save temporarily
+
+        userList.add(userId)
+
+        Toast.makeText(this, "SignUp Successful", Toast.LENGTH_SHORT).show()
+
+    }
+
+}
