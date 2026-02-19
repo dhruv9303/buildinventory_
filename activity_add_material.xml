@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_gradient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2E333A">
+
+
+        <!-- ✅ HEADER WITH BACK ARROW -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_arrow_back_24"
+                app:tint="#FFFFFF"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+
+            <TextView
+                android:text="Add New Material"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#FF9800"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+
+        <!-- Material Name -->
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="15dp"
+
+            app:boxStrokeColor="#FF9800"
+            app:boxBackgroundColor="#33FFFFFF"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/etMaterial"
+
+                android:hint="Material Name"
+
+                android:textColor="#FFFFFF"
+
+                android:textColorHint="#CCCCCC"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- SKU -->
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="15dp"
+
+            app:boxStrokeColor="#FF9800"
+            app:boxBackgroundColor="#33FFFFFF"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/etSku"
+
+                android:hint="SKU / ID"
+
+                android:textColor="#FFFFFF"
+
+                android:textColorHint="#CCCCCC"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Unit -->
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="15dp"
+
+            app:boxStrokeColor="#FF9800"
+            app:boxBackgroundColor="#33FFFFFF"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/etUnit"
+
+                android:hint="Unit Type"
+
+                android:textColor="#FFFFFF"
+
+                android:textColorHint="#CCCCCC"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- STOCK -->
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="15dp"
+
+            app:boxStrokeColor="#FF9800"
+            app:boxBackgroundColor="#33FFFFFF"
+
+            app:suffixText="kg"
+            app:suffixTextColor="#FFFFFF"
+
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/etStock"
+
+                android:hint="Current Stock"
+
+                android:textColor="#FFFFFF"
+
+                android:textColorHint="#CCCCCC"
+
+                android:inputType="number"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <!-- MIN THRESHOLD -->
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="15dp"
+
+            app:boxStrokeColor="#FF9800"
+            app:boxBackgroundColor="#33FFFFFF"
+
+            app:suffixText="kg"
+            app:suffixTextColor="#FFFFFF"
+
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/etMin"
+
+                android:hint="Min Threshold"
+
+                android:textColor="#FFFFFF"
+
+                android:textColorHint="#CCCCCC"
+
+                android:inputType="number"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <!-- SAVE BUTTON -->
+
+        <Button
+
+            android:id="@+id/btnSave"
+
+            android:text="Save Material"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
+
+            android:backgroundTint="#FF9800"
+
+            android:layout_marginTop="20dp"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="55dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
